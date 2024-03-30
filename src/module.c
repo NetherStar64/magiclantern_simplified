@@ -59,7 +59,7 @@ static int module_load_symbols(TCCState *s, char *filename)
         printf("Error loading '%s': File does not exist\n", filename);
         return -1;
     }
-    buf = fio_malloc(524288);
+    buf = fio_malloc(size);
     if(!buf)
     {
         printf("Error loading '%s': File too large\n", filename);

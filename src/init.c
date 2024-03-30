@@ -331,16 +331,16 @@ static void hello_world()
     while (!bmp_vram_raw())
         msleep(100);
 
-    DryosDebugMsg(0, 0xbeef, "==== HELLO WORLD ====");
+    DryosDebugMsg(0, 15, "==== HELLO WORLD ====");
     int colour = 4;
     while(1)
     {
-	DryosDebugMsg(0, 0xbeef, "Before bmpprint");
+	DryosDebugMsg(0, 15, "Before bmpprint");
 	void *pc;
     	asm("mov %0, pc" : "=r"(pc));
 	qprintf("%#x\n", pc);
         bmp_printf(0x0201, 140, 50, "Hello, World!");
-	DryosDebugMsg(0, 0xbeef, "After bmpprint");
+	DryosDebugMsg(0, 15, "After bmpprint");
 //        bmp_printf(FONT_LARGE, 140, 400, "firmware signature = 0x%x", sig);
 
         if (colour == 15)

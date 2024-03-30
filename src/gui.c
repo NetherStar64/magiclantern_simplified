@@ -108,7 +108,7 @@ extern struct gui_main_struct gui_main_struct;
 void ml_gui_main_task()
 {
     qprintf("Hello from ml_gui_main_task");
-    DryosDebugMsg(0,0xbeef,"ml_gui_main_task");
+    DryosDebugMsg(0,15,"ml_gui_main_task");
     struct event * event = NULL;
     int index = 0;
     void* funcs[GMT_NFUNCS];
